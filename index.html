@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    
+    .flex-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .grid-container{
+      padding: 0;
+      margin: 0;
+      display: grid;
+      height: 748px;
+      width: 748px;
+      grid-template-columns: 320px 360px 50px;
+      grid-template-rows: 414px 296px 20px;
+      gap: 9px;
+      background-color: #000;
+    }
+
+    .grid-container *{
+      background-color: #F0F1EC;
+    }
+
+    .item-1{
+      background-color: #E72F24;
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .item-2{
+      grid-area: 1 / 2 / span 1 / span 2;
+    }
+
+    .item-3{
+      grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+
+    .item-4{
+      grid-area: 2 / 2 / span 1 / span 1;
+    }
+
+    .item-5{
+      grid-area: 3 / 1 / span 1 / span 1;
+    }
+
+    .bee-flex{
+      display: flex;
+      padding: 0;
+      margin: 0;
+      background-color: #000;
+      gap: 9px;
+      grid-area: 3 / 2 / -1 / span 1;
+    }
+
+    .yellow{
+      background-color: #F9D01E;
+      flex: 0 0 198px;
+    }
+
+    .black{
+      background-color: #232629;
+      flex: 0 0 153px;
+    }
+
+    .blue-flex{
+      grid-area: 2 / -1 / span 2 / -2;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 9px;
+    }
+
+    .blue{
+      flex: 1;
+      background-color: #004592;
+      border-bottom: 10px solid #000;
+    }
+
+    .white{
+      flex: 0 0 186px;
+    }
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="grid-container">
+      <div class="item-1"></div>
+      <div class="item-2"></div>
+      <div class="item-3"></div>
+      <div class="item-4"></div>
+      <div class="item-5"></div>
+      <div class="bee-flex">
+        <div class="yellow"></div>
+        <div class="black"></div>
+      </div>
+      <div class="blue-flex">
+        <div class="blue"></div>
+        <div class="white"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Write your HTML here -->
+</body>
+
+</html>
